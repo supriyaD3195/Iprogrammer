@@ -1,0 +1,25 @@
+mat-card{
+
+  width: 26%;
+  height: 400px;
+  margin:2em auto;
+  text-align: center;
+
+}
+.container{
+  display: flex;
+}
+button{
+
+
+  background-color: blue;
+  color: white !important;
+}
+
+table{
+  width: 97%;
+  padding: 2px;
+  margin: auto;
+
+}
+

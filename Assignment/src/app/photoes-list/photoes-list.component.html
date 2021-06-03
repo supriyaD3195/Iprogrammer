@@ -1,0 +1,43 @@
+<div class="container">
+  <mat-card *ngFor="let item of response; let i = index">
+    <mat-card-content>
+      <img src="{{ item.thumbnailUrl }}" />
+      <h6>Title is: {{ item.title }}</h6>
+      <h6>Id is: {{ item.id }}</h6>
+      <h6>
+       URL is: {{ item.url }}
+      </h6>
+
+      <button        *ngIf="item.comparein == false" mat-button color="primary" (click)="click(i)">Compare</button>
+      <button
+        mat-button
+        color="primary"
+        *ngIf="item.comparein == true"
+        (click)="click(i)"
+      >
+        Remove
+      </button>
+    </mat-card-content></mat-card
+  >
+</div>
+<table border="1">
+
+    <tr style="text-align: center">
+      COMPARISON TABLE
+    </tr>
+    <tr>
+      <th></th>
+      <th>ID</th>
+      <th>URL</th>
+      <th>Title</th>
+    </tr>
+    <div *ngFor="let item of response">
+      <tr *ngIf="item.comparein">
+        <td><img src="{{ item.thumbnailUrl }}" width="50px"/></td>
+        <td>{{ item.id }}</td>
+        <td>{{ item.url }}</td>
+        <td>{{ item.title }}</td>
+      </tr>
+    </div>
+
+</table>
